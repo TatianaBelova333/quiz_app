@@ -1,0 +1,98 @@
+[
+{
+  "model": "quiz.question",
+  "pk": 1,
+  "fields": {
+    "text": "Django - это микрофреймворк?",
+    "correct_answer": false
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 2,
+  "fields": {
+    "text": "GET - это идемпотентный HTTP метод?",
+    "correct_answer": true
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 3,
+  "fields": {
+    "text": "PATCH - это идемпотентный HTTP метод?",
+    "correct_answer": false
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 4,
+  "fields": {
+    "text": "Python имеет  динамическую строгую типизацию?",
+    "correct_answer": true
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 5,
+  "fields": {
+    "text": "SQL является декларативным языком?",
+    "correct_answer": true
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 6,
+  "fields": {
+    "text": "FLASK - это микрофреймворк?",
+    "correct_answer": true
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 7,
+  "fields": {
+    "text": "Python использует интернирование объектов?",
+    "correct_answer": true
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 8,
+  "fields": {
+    "text": "Функции map() и filter() возвращают итератор",
+    "correct_answer": true
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 9,
+  "fields": {
+    "text": "У всех итерируемых объектов есть магический метод __next__?",
+    "correct_answer": false
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 10,
+  "fields": {
+    "text": "У всех итерируемых объектов есть магический метод __iter__?",
+    "correct_answer": true
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 11,
+  "fields": {
+    "text": "Функция range() возвращает итератор?",
+    "correct_answer": false
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 12,
+  "fields": {
+    "text": "Регулярное выражение - это строка, задающая шаблон поиска подстрок в тексте.",
+    "correct_answer": true
+  }
+}
+]
