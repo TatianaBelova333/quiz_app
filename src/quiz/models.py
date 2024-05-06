@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.core.validators import (
     MaxValueValidator,
     MinValueValidator,
@@ -77,6 +78,7 @@ class Attempt(models.Model):
     result = models.PositiveSmallIntegerField(
         verbose_name='Результат попытки',
         null=True,
+        blank=True,
         validators=(
             MinValueValidator(
                 limit_value=0,
@@ -124,6 +126,19 @@ class Answer(models.Model):
     class Meta:
         verbose_name = "Ответ"
         verbose_name_plural = "Ответы"
+
+    def clean(self):
+        """
+        Raise ValidationError if the .
+
+        """
+        if self.attempt_id is not None and self.question_id is not None:
+            attempt = Attempt.objects.get(pk=self.attempt_id)
+            quiz = attempt.quiz
+            if self.question not in quiz.questions.all():
+                raise ValidationError(
+                    {'question': 'Этого вопроса нет в тесте.'}
+                )
 
     def save(self, *args, **kwargs):
         """

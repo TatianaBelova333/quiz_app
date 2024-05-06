@@ -1,5 +1,6 @@
 from typing import OrderedDict
 
+from django.db.models import Count, FloatField, Sum
 from django.db import DatabaseError, transaction
 from rest_framework import serializers
 
@@ -49,12 +50,16 @@ class AttemptCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attempt
         fields = ('id', 'quiz', 'attempt_date', 'result', 'answers')
-        read_only_fields = ('id', 'result', 'attempt_date', 'quiz')
+        read_only_fields = ('id', 'result', 'attempt_date')
 
-    def validate_answers(self, data):
-        if len(data) < 0:
+    def validate(self, data):
+        """Validate that the questions correspond to the quiz."""
+        quiz_taken = data['quiz']
+        received_answers = data['answers']
+        answered_questions = [answer['question'] for answer in received_answers]
+        if set(quiz_taken.questions.all()) != set(answered_questions):
             raise serializers.ValidationError(
-                'Необходимо ответить хотя бы на один вопрос'
+                'Неверные вопросы или неверный тест.'
             )
         return data
 
@@ -63,24 +68,37 @@ class AttemptCreateSerializer(serializers.ModelSerializer):
         try:
             with transaction.atomic():
                 attempt = Attempt.objects.create(**validated_data)
+
                 self.__create_answers(attempt, answers)
-                attempt.result = self.__get_result(attempt)
+
+                attempt.result = self.__get_attempt_result(attempt)
                 attempt.save()
+
         except DatabaseError:
             raise serializers.ValidationError(
-                "Ошибка"
+                'Произошла ошибка во время выполнения теста.'
             )
 
         return attempt
 
     def __create_answers(self, attempt: Attempt, answers: list[OrderedDict]):
+        """
+        Save Answer instances into db for one attempt.
+
+        """
         for answer in answers:
             is_correct = answer['given_answer'] == answer['question'].correct_answer
             Answer.objects.create(**answer, attempt=attempt, is_correct=is_correct)
 
-    def __get_result(self, attempt: Attempt):
-        quiz_questions_count = attempt.quiz.questions.count()
-        received_answers = attempt.answers.all()
-        correct_answers = received_answers.values_list('is_correct', flat=True)
-        result = round(sum(correct_answers) / quiz_questions_count * 100)
-        return result
+    def __get_attempt_result(self, attempt: Attempt) -> float:
+        """
+        Calculate and return the percentage of correct answers for one attempt
+        (the result field for Attempt model).
+
+        """
+        right_answers: dict[str, float] = attempt.answers.aggregate(
+            result=100 *
+            Sum('is_correct', output_field=FloatField()) /
+            Count('is_correct', output_field=FloatField()),
+        )
+        return right_answers['result']

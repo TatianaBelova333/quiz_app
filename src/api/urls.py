@@ -14,7 +14,7 @@ router_v1.register(
     'quizzes', QuizReadOnlyViewset, basename='quizzes',
 )
 router_v1.register(
-    r'quizzes/(?P<quiz_pk>\d+)/attempts/?', AttemptViewset, basename='attempts',
+    'attempts', AttemptViewset, basename='attempts',
 )
 
 urlpatterns = [
