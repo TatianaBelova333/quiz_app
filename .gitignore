@@ -175,3 +175,5 @@ media/
 
 # Logging data folder
 .data/
+*.bak
+*.back

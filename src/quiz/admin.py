@@ -50,8 +50,14 @@ class AnswerAdmin(admin.ModelAdmin):
     """The representation of the Quiz model in the admin interface."""
     list_display = (
         'id',
-        'attempt',
+        'attempt_link',
         'question',
         'given_answer',
         'is_correct',
     )
+    list_filter = ('attempt', 'attempt__quiz')
+
+    def attempt_link(self, obj):
+        attempt = obj.attempt
+        url = reverse('admin:quiz_attempt_changelist') + str(attempt.id)
+        return format_html(f'<a href="{url}">{attempt}</a>')
