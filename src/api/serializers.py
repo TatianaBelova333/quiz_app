@@ -4,8 +4,9 @@ from django.db.models import Count, FloatField, Sum
 from django.db import DatabaseError, transaction
 from rest_framework import serializers
 
+from attempt.models import Answer, Attempt
 from quiz.constants import ANSWER_CHOICES
-from quiz.models import Answer, Attempt, Question, Quiz
+from quiz.models import Question, Quiz
 
 
 class QuestionSerializer(serializers.ModelSerializer):

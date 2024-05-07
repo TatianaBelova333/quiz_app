@@ -10,8 +10,9 @@ from api.serializers import (
     QuestionSerializer,
     QuizSerializer
 )
+from attempt.models import Answer, Attempt
 from quiz.constants import MIN_SUCCESS_SCORE
-from quiz.models import Answer, Attempt, Question, Quiz
+from quiz.models import Question, Quiz
 
 
 class QuestionReadOnlyViewset(viewsets.ReadOnlyModelViewSet):

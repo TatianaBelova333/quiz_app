@@ -25,6 +25,7 @@ INSTALLED_APPS = [
 
     'quiz',
     'api',
+    'attempt',
 
     'drf_yasg',
     'rest_framework',
