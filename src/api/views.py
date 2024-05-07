@@ -75,14 +75,14 @@ class QuizReadOnlyViewset(viewsets.ReadOnlyModelViewSet):
         ).values(
             'question_id', 'text'
         ).annotate(
-            score=100 *
+            right_answer_pct=100 *
             Sum('is_correct', output_field=FloatField()) /
             Count('is_correct', output_field=FloatField()),
         )
 
-        min_score = rated_answers.order_by('score')[0]['score']
+        min_score = rated_answers.order_by('right_answer_pct')[0]['right_answer_pct']
         most_difficult_qns = [
-            ans for ans in rated_answers if ans['score'] == min_score
+            ans for ans in rated_answers if ans['right_answer_pct'] == min_score
         ]
 
         return most_difficult_qns
