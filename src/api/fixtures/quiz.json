@@ -1,0 +1,44 @@
+[
+{
+  "model": "quiz.quiz",
+  "pk": 1,
+  "fields": {
+    "title": "Основы Python",
+    "created_date": "2024-05-04T18:22:49.264Z",
+    "questions": [
+      4,
+      8,
+      9,
+      10,
+      11
+    ]
+  }
+},
+{
+  "model": "quiz.quiz",
+  "pk": 2,
+  "fields": {
+    "title": "Основы SQL",
+    "created_date": "2024-05-04T18:43:53.030Z",
+    "questions": [
+      5,
+      13,
+      14,
+      15,
+      16
+    ]
+  }
+},
+{
+  "model": "quiz.quiz",
+  "pk": 3,
+  "fields": {
+    "title": "Основы программирования",
+    "created_date": "2024-05-04T18:44:54.214Z",
+    "questions": [
+      1,
+      5
+    ]
+  }
+}
+]

@@ -1,0 +1,182 @@
+[
+{
+  "model": "quiz.attempt",
+  "pk": 63,
+  "fields": {
+    "quiz": 3,
+    "attempt_date": "2024-05-06T16:19:17.925Z",
+    "result": 50
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 64,
+  "fields": {
+    "quiz": 3,
+    "attempt_date": "2024-05-06T16:19:32.367Z",
+    "result": 100
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 65,
+  "fields": {
+    "quiz": 3,
+    "attempt_date": "2024-05-06T16:19:35.910Z",
+    "result": 50
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 66,
+  "fields": {
+    "quiz": 3,
+    "attempt_date": "2024-05-06T16:19:50.593Z",
+    "result": 0
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 67,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T16:21:39.898Z",
+    "result": 60
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 68,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T16:21:56.350Z",
+    "result": 40
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 69,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T16:21:59.741Z",
+    "result": 20
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 70,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T16:22:02.494Z",
+    "result": 0
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 71,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T17:33:48.998Z",
+    "result": 0
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 72,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T17:36:00.225Z",
+    "result": 0
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 73,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T19:55:44.460Z",
+    "result": 0
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 75,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T19:59:51.804Z",
+    "result": 0
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 76,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T20:01:33.852Z",
+    "result": 0
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 77,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T20:03:01.565Z",
+    "result": 0
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 78,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T20:05:02.414Z",
+    "result": 0
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 79,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T20:17:35.142Z",
+    "result": 0
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 84,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T22:46:11.550Z",
+    "result": 100
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 85,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T23:03:17.431Z",
+    "result": 100
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 86,
+  "fields": {
+    "quiz": 1,
+    "attempt_date": "2024-05-06T23:04:32.017Z",
+    "result": 100
+  }
+},
+{
+  "model": "quiz.attempt",
+  "pk": 87,
+  "fields": {
+    "quiz": 3,
+    "attempt_date": "2024-05-07T09:43:03.000Z",
+    "result": 50
+  }
+}
+]

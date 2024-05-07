@@ -41,7 +41,7 @@
   ```
 - Заполнить базу тестовыми данными
   ```
-  python3 manage.py loaddata question 
+  python3 manage.py loaddata question quiz attempt answer
   ```
 - Создать superuser:
   ```
@@ -52,7 +52,7 @@
   python3 manage.py runserver
   ```
 
-# SOME REST API EXAMPLES
+## SOME REST API EXAMPLES
 ### Swagger API documentation is available at 
 `http://127.0.0.1:8000/swagger/`
 ### Получить список вопросов
