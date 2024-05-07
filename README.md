@@ -41,7 +41,7 @@
   ```
 - Заполнить базу тестовыми данными
   ```
-  python3 manage.py loaddata question 
+  python3 manage.py loaddata question quiz attempt answer
   ```
 - Создать superuser:
   ```
