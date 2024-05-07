@@ -52,8 +52,8 @@
   python3 manage.py runserver
   ```
 
-# API SOME REST API EXAMPLES
-### SWagger API documentation is available at 
+# SOME REST API EXAMPLES
+### Swagger API documentation is available at 
 `http://127.0.0.1:8000/swagger/`
 ### Получить список вопросов
   ```
